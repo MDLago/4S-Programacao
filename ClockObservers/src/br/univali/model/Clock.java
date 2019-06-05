@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Clock implements Runnable {
-    private List<ClockListener> listeners = new ArrayList<ClockListener>();
+    private List<ClockListener> listeners = new ArrayList<>();
     
     public void addListener(ClockListener l){
         listeners.add(l);

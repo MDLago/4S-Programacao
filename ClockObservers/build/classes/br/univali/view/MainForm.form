@@ -31,22 +31,39 @@
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="analogClockComponent2" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="digitalClockComponent1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="digitalClockComponent1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="analogClockComponent3" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="48" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <Component id="digitalClockComponent2" min="-2" pref="100" max="-2" attributes="0"/>
+              <EmptySpace pref="156" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="analogClockComponent1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="analogClockComponent2" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="analogClockComponent1" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="analogClockComponent2" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="digitalClockComponent1" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="analogClockComponent3" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                      <Component id="digitalClockComponent2" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="digitalClockComponent1" min="-2" pref="100" max="-2" attributes="0"/>
               <EmptySpace pref="75" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -66,6 +83,18 @@
       </Layout>
     </Container>
     <Container class="br.univali.view.AnalogClockComponent" name="analogClockComponent2">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="br.univali.view.AnalogClockComponent" name="analogClockComponent3">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Container class="br.univali.view.DigitalClockComponent" name="digitalClockComponent2">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="true"/>

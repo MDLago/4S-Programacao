@@ -1,11 +1,24 @@
 package br.univali.view;
 
+import br.univali.model.ClockEvent;
+import br.univali.model.ClockListener;
 import javax.swing.JComponent;
 
-public class AbstractClockComponent extends JComponent{
+public class AbstractClockComponent extends JComponent 
+        implements ClockListener{
+    
     private int hora = (int)(Math.random() * 24);
     private int minuto = (int)(Math.random() * 60);
     private int segundo = (int)(Math.random() * 60);
+
+    @Override
+    public void clockTick(ClockEvent e) {
+        setHora(e.getH());
+        setMinuto(e.getM());
+        setSegundo(e.getS());
+    }
+    
+    
     
     public void setHora(int hora) {
         if( hora>=0 && hora <= 23 ){

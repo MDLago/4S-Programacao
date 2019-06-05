@@ -3,6 +3,7 @@ package br.univali.view;
 import br.univali.model.Clock;
 import br.univali.model.ClockEvent;
 import br.univali.model.ClockListener;
+import java.awt.Component;
 
 /**
  *
@@ -15,20 +16,15 @@ public class MainForm extends javax.swing.JFrame {
     /** Creates new form MainForm */
     public MainForm() {
         initComponents();
-        relogio.addListener(new ClockListener() {
-            @Override
-            public void clockTick(ClockEvent e) {
-                analogClockComponent1.setHora(e.getH());
-                analogClockComponent1.setMinuto(e.getM());
-                analogClockComponent1.setSegundo(e.getS());
-                
-                digitalClockComponent1.setHora(e.getH());
-                digitalClockComponent1.setMinuto(e.getM());
-                digitalClockComponent1.setSegundo(e.getS());
-            }
-        });
         relogio = Clock.getInstancia();
         
+        Component[] components = getContentPane().getComponents();
+        
+        for (Component component : components) {
+            if(component instanceof ClockListener){
+                relogio.addListener((ClockListener)component);
+            }
+        }
         
     }
 
@@ -44,6 +40,8 @@ public class MainForm extends javax.swing.JFrame {
         analogClockComponent1 = new br.univali.view.AnalogClockComponent();
         digitalClockComponent1 = new br.univali.view.DigitalClockComponent();
         analogClockComponent2 = new br.univali.view.AnalogClockComponent();
+        analogClockComponent3 = new br.univali.view.AnalogClockComponent();
+        digitalClockComponent2 = new br.univali.view.DigitalClockComponent();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,18 +56,30 @@ public class MainForm extends javax.swing.JFrame {
                         .addComponent(analogClockComponent1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
                         .addComponent(analogClockComponent2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(digitalClockComponent1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(48, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(digitalClockComponent1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(analogClockComponent3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(39, 39, 39)
+                .addComponent(digitalClockComponent2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(analogClockComponent1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(analogClockComponent2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(digitalClockComponent1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(analogClockComponent1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(analogClockComponent2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(digitalClockComponent1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(analogClockComponent3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(digitalClockComponent2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
 
@@ -114,6 +124,8 @@ public class MainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private br.univali.view.AnalogClockComponent analogClockComponent1;
     private br.univali.view.AnalogClockComponent analogClockComponent2;
+    private br.univali.view.AnalogClockComponent analogClockComponent3;
     private br.univali.view.DigitalClockComponent digitalClockComponent1;
+    private br.univali.view.DigitalClockComponent digitalClockComponent2;
     // End of variables declaration//GEN-END:variables
 }

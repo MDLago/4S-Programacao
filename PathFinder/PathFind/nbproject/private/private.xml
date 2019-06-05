@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/5586658/Documents/GitHub/4S-Programacao/PathFinder/PathFind/src/pathfind/Path.java</file>
+            <file>file:/C:/Users/5586658/Documents/GitHub/4S-Programacao/PathFinder/PathFind/src/pathfind/estrategias/PathFinderStrategy.java</file>
+            <file>file:/C:/Users/5586658/Documents/GitHub/4S-Programacao/PathFinder/PathFind/src/pathfind/estrategias/ManhatamHeiristic.java</file>
+            <file>file:/C:/Users/5586658/Documents/GitHub/4S-Programacao/PathFinder/PathFind/src/pathfind/estrategias/EuclidianHeiristic.java</file>
+            <file>file:/C:/Users/5586658/Documents/GitHub/4S-Programacao/PathFinder/PathFind/src/pathfind/PathFinder.java</file>
+            <file>file:/C:/Users/5586658/Documents/GitHub/4S-Programacao/PathFinder/PathFind/src/pathfind/estrategias/AStarPathFinderStrategy.java</file>
+        </group>
+    </open-files>
+</project-private>
